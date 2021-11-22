@@ -20,13 +20,17 @@ export const WEIGHTS = {
 const defaultFontSize = 16;
 
 const BREAKPOINTS = {
-	phoneMin: 600 / defaultFontSize,
-	tabletMin: 950 / defaultFontSize,
-	laptopMin: 1300 / defaultFontSize,
+	phoneMax: 600,
+	tabletMax: 950,
+	laptopMax: 1300,
 };
 
 export const QUERIES = {
-	phoneAndDown: `(max-width: ${BREAKPOINTS.phoneMin}rem)`,
-	tabletAndDown: `(max-width: ${BREAKPOINTS.tabletMin}rem)`,
-	laptopAndDown: `(max-width: ${BREAKPOINTS.laptopMin}rem)`,
+	phoneAndSmaller: `(max-width: ${BREAKPOINTS.phoneMax / defaultFontSize}rem)`,
+	tabletAndSmaller: `(max-width: ${
+		BREAKPOINTS.tabletMax / defaultFontSize
+	}rem)`,
+	laptopAndSmaller: `(max-width: ${
+		BREAKPOINTS.laptopMax / defaultFontSize
+	}rem)`,
 };
