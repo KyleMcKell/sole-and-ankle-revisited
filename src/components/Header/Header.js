@@ -86,7 +86,7 @@ const MobileActions = styled.div`
 	@media ${QUERIES.tabletAndSmaller} {
 		display: flex;
 		margin-left: auto;
-		gap: clamp(16px, 9.5vw - 1.75rem, 32px);
+		gap: clamp(16px, 9.5vw - 28px, 32px);
 	}
 `;
 
