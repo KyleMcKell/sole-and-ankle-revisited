@@ -33,7 +33,7 @@ const Header = () => {
 					<NavLink href="/collections">Collections</NavLink>
 				</DesktopNav>
 				<Side />
-				<MobileWrapper>
+				<MobileActions>
 					<UnstyledButton>
 						<Icon id="shopping-bag" strokeWidth={1} />
 						<VisuallyHidden>Open cart</VisuallyHidden>
@@ -46,7 +46,7 @@ const Header = () => {
 						<Icon id="menu" strokeWidth={3} />
 						<VisuallyHidden>Menu</VisuallyHidden>
 					</UnstyledButton>
-				</MobileWrapper>
+				</MobileActions>
 			</MainHeader>
 
 			<MobileMenu
@@ -105,7 +105,7 @@ const NavLink = styled.a`
 	}
 `;
 
-const MobileWrapper = styled.div`
+const MobileActions = styled.div`
 	display: none;
 
 	@media ${QUERIES.tabletAndSmaller} {
