@@ -70,6 +70,11 @@ const MainHeader = styled.div`
 	}
 `;
 
+const HeaderLogo = styled(Logo)`
+	width: fit-content;
+	pointer-events: auto;
+`;
+
 const DesktopNav = styled.nav`
 	display: flex;
 	gap: 48px;
@@ -80,6 +85,16 @@ const DesktopNav = styled.nav`
 	}
 `;
 
+const MobileActions = styled.div`
+	display: none;
+
+	@media ${QUERIES.tabletAndSmaller} {
+		display: flex;
+		margin-left: auto;
+		gap: clamp(16px, 9.5vw - 1.75rem, 32px);
+	}
+`;
+
 const Side = styled.div`
 	flex: 1;
 	pointer-events: none;
@@ -87,11 +102,6 @@ const Side = styled.div`
 	@media ${QUERIES.tabletAndSmaller} {
 		flex: revert;
 	}
-`;
-
-const HeaderLogo = styled(Logo)`
-	width: fit-content;
-	pointer-events: auto;
 `;
 
 const NavLink = styled.a`
@@ -108,16 +118,6 @@ const NavLink = styled.a`
 
 const ShoppingBagButton = styled(UnstyledButton)`
 	transform: translateX(-2px);
-`;
-
-const MobileActions = styled.div`
-	display: none;
-
-	@media ${QUERIES.tabletAndSmaller} {
-		display: flex;
-		margin-left: auto;
-		gap: clamp(16px, 9.5vw - 1.75rem, 32px);
-	}
 `;
 
 export default Header;
