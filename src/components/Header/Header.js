@@ -35,15 +35,15 @@ const Header = () => {
 				<Side />
 				<MobileActions>
 					<UnstyledButton>
-						<Icon id="shopping-bag" strokeWidth={1} />
+						<Icon id="shopping-bag" strokeWidth={2} />
 						<VisuallyHidden>Open cart</VisuallyHidden>
 					</UnstyledButton>
 					<UnstyledButton>
-						<Icon id="search" strokeWidth={1} />
+						<Icon id="search" strokeWidth={2} />
 						<VisuallyHidden>Search</VisuallyHidden>
 					</UnstyledButton>
 					<UnstyledButton onClick={() => setShowMobileMenu(true)}>
-						<Icon id="menu" strokeWidth={3} />
+						<Icon id="menu" strokeWidth={2} />
 						<VisuallyHidden>Menu</VisuallyHidden>
 					</UnstyledButton>
 				</MobileActions>
@@ -66,6 +66,7 @@ const MainHeader = styled.div`
 
 	@media ${QUERIES.tabletAndSmaller} {
 		border-top: 4px solid ${COLORS.gray[900]};
+		align-items: center;
 	}
 `;
 
