@@ -34,10 +34,10 @@ const Header = () => {
 				</DesktopNav>
 				<Side />
 				<MobileActions>
-					<UnstyledButton>
+					<ShoppingBagButton>
 						<Icon id="shopping-bag" strokeWidth={2} />
 						<VisuallyHidden>Open cart</VisuallyHidden>
-					</UnstyledButton>
+					</ShoppingBagButton>
 					<UnstyledButton>
 						<Icon id="search" strokeWidth={2} />
 						<VisuallyHidden>Search</VisuallyHidden>
@@ -104,6 +104,10 @@ const NavLink = styled.a`
 	&:first-of-type {
 		color: ${COLORS.secondary};
 	}
+`;
+
+const ShoppingBagButton = styled(UnstyledButton)`
+	transform: translateX(-2px);
 `;
 
 const MobileActions = styled.div`
