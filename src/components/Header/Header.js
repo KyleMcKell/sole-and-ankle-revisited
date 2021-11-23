@@ -32,7 +32,6 @@ const Header = () => {
 					<NavLink href="/kids">Kids</NavLink>
 					<NavLink href="/collections">Collections</NavLink>
 				</DesktopNav>
-				<Side />
 				<MobileActions>
 					<ShoppingBagButton>
 						<Icon id="shopping-bag" strokeWidth={2} />
@@ -47,6 +46,7 @@ const Header = () => {
 						<VisuallyHidden>Menu</VisuallyHidden>
 					</UnstyledButton>
 				</MobileActions>
+				<Side />
 			</MainHeader>
 
 			<MobileMenu
