@@ -27,6 +27,7 @@ const Header = () => {
 					<NavLink href="/kids">Kids</NavLink>
 					<NavLink href="/collections">Collections</NavLink>
 				</DesktopNav>
+				<Side />
 				<MobileActions>
 					<ShoppingBagButton>
 						<Icon id="shopping-bag" strokeWidth={2} />
@@ -41,7 +42,6 @@ const Header = () => {
 						<VisuallyHidden>Menu</VisuallyHidden>
 					</UnstyledButton>
 				</MobileActions>
-				<Side />
 			</MainHeader>
 
 			<MobileMenu
@@ -61,6 +61,7 @@ const MainHeader = styled.div`
 
 	@media ${QUERIES.tabletAndSmaller} {
 		border-top: 4px solid ${COLORS.gray[900]};
+		justify-content: space-between;
 		align-items: center;
 	}
 `;
@@ -85,7 +86,6 @@ const MobileActions = styled.div`
 
 	@media ${QUERIES.tabletAndSmaller} {
 		display: flex;
-		margin-left: auto;
 		gap: clamp(16px, 9.5vw - 28px, 32px);
 	}
 `;
