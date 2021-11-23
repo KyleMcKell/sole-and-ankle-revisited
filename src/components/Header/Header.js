@@ -21,9 +21,9 @@ const Header = () => {
 		<header>
 			<SuperHeader />
 			<MainHeader>
-				<LogoWrapper>
+				<Side>
 					<HeaderLogo />
-				</LogoWrapper>
+				</Side>
 				<DesktopNav>
 					<NavLink href="/sale">Sale</NavLink>
 					<NavLink href="/new">New&nbsp;Releases</NavLink>
@@ -32,13 +32,14 @@ const Header = () => {
 					<NavLink href="/kids">Kids</NavLink>
 					<NavLink href="/collections">Collections</NavLink>
 				</DesktopNav>
+				<Side />
 				<MobileWrapper>
 					<UnstyledButton>
-						<Icon id="shopping-bag" strokeWidth={2} />
+						<Icon id="shopping-bag" strokeWidth={1} />
 						<VisuallyHidden>Open cart</VisuallyHidden>
 					</UnstyledButton>
 					<UnstyledButton>
-						<Icon id="search" strokeWidth={2} />
+						<Icon id="search" strokeWidth={1} />
 						<VisuallyHidden>Search</VisuallyHidden>
 					</UnstyledButton>
 					<UnstyledButton onClick={() => setShowMobileMenu(true)}>
@@ -46,7 +47,6 @@ const Header = () => {
 						<VisuallyHidden>Menu</VisuallyHidden>
 					</UnstyledButton>
 				</MobileWrapper>
-				<Filler />
 			</MainHeader>
 
 			<MobileMenu
@@ -60,19 +60,12 @@ const Header = () => {
 const MainHeader = styled.div`
 	display: flex;
 	align-items: baseline;
-	padding: 18px 32px;
+	padding: 18px clamp(16px, 9.5vw - 24px, 32px);
 	height: 72px;
 	border-bottom: 1px solid ${COLORS.gray[300]};
 
 	@media ${QUERIES.tabletAndSmaller} {
 		border-top: 4px solid ${COLORS.gray[900]};
-		align-items: center;
-		justify-content: space-between;
-	}
-
-	@media ${QUERIES.phoneAndSmaller} {
-		padding-left: 16px;
-		padding-right: 16px;
 	}
 `;
 
@@ -86,7 +79,7 @@ const DesktopNav = styled.nav`
 	}
 `;
 
-const LogoWrapper = styled.div`
+const Side = styled.div`
 	flex: 1;
 	pointer-events: none;
 
@@ -98,14 +91,6 @@ const LogoWrapper = styled.div`
 const HeaderLogo = styled(Logo)`
 	width: fit-content;
 	pointer-events: auto;
-`;
-
-const Filler = styled.div`
-	flex: 1;
-
-	@media ${QUERIES.tabletAndSmaller} {
-		display: none;
-	}
 `;
 
 const NavLink = styled.a`
@@ -125,6 +110,7 @@ const MobileWrapper = styled.div`
 
 	@media ${QUERIES.tabletAndSmaller} {
 		display: flex;
+		margin-left: auto;
 		gap: clamp(16px, 9.5vw - 1.75rem, 32px);
 	}
 `;
