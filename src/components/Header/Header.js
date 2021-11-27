@@ -4,14 +4,11 @@ import styled from 'styled-components/macro';
 import { COLORS, QUERIES, WEIGHTS } from '../../constants';
 import Logo from '../Logo';
 import SuperHeader from '../SuperHeader';
-import MobileMenu from '../MobileMenu';
 import UnstyledButton from '../UnstyledButton';
 import Icon from '../Icon';
 import VisuallyHidden from '../VisuallyHidden';
 
-const Header = () => {
-	const [showMobileMenu, setShowMobileMenu] = React.useState(false);
-
+const Header = ({ setShowMobileMenu }) => {
 	return (
 		<header>
 			<SuperHeader />
@@ -43,11 +40,6 @@ const Header = () => {
 					</UnstyledButton>
 				</MobileActions>
 			</MainHeader>
-
-			<MobileMenu
-				isOpen={showMobileMenu}
-				onDismiss={() => setShowMobileMenu(false)}
-			/>
 		</header>
 	);
 };

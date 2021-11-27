@@ -3,17 +3,23 @@ import styled from 'styled-components/macro';
 import { QUERIES } from '../../constants';
 
 import Header from '../Header';
+import MobileMenu from '../MobileMenu';
 import ShoeIndex from '../ShoeIndex';
 
 const App = () => {
 	const [sortId, setSortId] = React.useState('newest');
+	const [showMobileMenu, setShowMobileMenu] = React.useState(false);
 
 	return (
 		<>
-			<Header />
+			<Header setShowMobileMenu={setShowMobileMenu} />
 			<Main>
 				<ShoeIndex sortId={sortId} setSortId={setSortId} />
 			</Main>
+			<MobileMenu
+				isOpen={showMobileMenu}
+				onDismiss={() => setShowMobileMenu(false)}
+			/>
 		</>
 	);
 };
