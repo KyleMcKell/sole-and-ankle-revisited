@@ -47,14 +47,20 @@ const Header = ({ setShowMobileMenu }) => {
 const MainHeader = styled.div`
 	display: flex;
 	align-items: baseline;
-	padding: 18px clamp(16px, 9.5vw - 24px, 32px);
-	height: 72px;
+	padding: 18px 32px;
+
+	overflow: auto;
 	border-bottom: 1px solid ${COLORS.gray[300]};
 
 	@media ${QUERIES.tabletAndSmaller} {
 		border-top: 4px solid ${COLORS.gray[900]};
 		justify-content: space-between;
 		align-items: center;
+	}
+
+	@media ${QUERIES.phoneAndSmaller} {
+		padding-left: 16px;
+		padding-right: 16px;
 	}
 `;
 
@@ -65,7 +71,7 @@ const HeaderLogo = styled(Logo)`
 
 const DesktopNav = styled.nav`
 	display: flex;
-	gap: 48px;
+	gap: clamp(1rem, 9.2vw - 4.5rem, 3.5rem);
 	margin: 0px 48px;
 
 	@media ${QUERIES.tabletAndSmaller} {
@@ -77,8 +83,12 @@ const MobileActions = styled.div`
 	display: none;
 
 	@media ${QUERIES.tabletAndSmaller} {
+		gap: 32px;
 		display: flex;
-		gap: clamp(16px, 9.5vw - 28px, 32px);
+	}
+
+	@media ${QUERIES.phoneAndSmaller} {
+		gap: 16px;
 	}
 `;
 
