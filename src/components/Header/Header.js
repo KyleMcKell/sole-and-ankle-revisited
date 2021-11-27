@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import { COLORS, QUERIES, WEIGHTS } from '../../constants';
+import { QUERIES } from '../../constants';
 import Logo from '../Logo';
 import SuperHeader from '../SuperHeader';
 import UnstyledButton from '../UnstyledButton';
@@ -50,10 +50,10 @@ const MainHeader = styled.div`
 	padding: 18px 32px;
 
 	overflow: auto;
-	border-bottom: 1px solid ${COLORS.gray[300]};
+	border-bottom: 1px solid var(--color-gray-300);
 
 	@media ${QUERIES.tabletAndSmaller} {
-		border-top: 4px solid ${COLORS.gray[900]};
+		border-top: 4px solid var(--color-gray-900);
 		justify-content: space-between;
 		align-items: center;
 	}
@@ -105,11 +105,11 @@ const NavLink = styled.a`
 	font-size: 1.125rem;
 	text-transform: uppercase;
 	text-decoration: none;
-	color: ${COLORS.gray[900]};
-	font-weight: ${WEIGHTS.medium};
+	color: var(--color-gray-900);
+	font-weight: var(--weight-medium);
 
 	&:first-of-type {
-		color: ${COLORS.secondary};
+		color: var(--color-secondary);
 	}
 `;
 
