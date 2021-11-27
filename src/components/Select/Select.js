@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import { COLORS, QUERIES, WEIGHTS } from '../../constants';
+import { COLORS, WEIGHTS } from '../../constants';
 
 import Icon from '../Icon';
 
