@@ -76,17 +76,20 @@ html {
   /*
     css variables for theming
   */
-  --color-white: ${COLORS.white};
-  --color-gray-100: ${COLORS.gray[100]};
-  --color-gray-300: ${COLORS.gray[300]};
-  --color-gray-500: ${COLORS.gray[500]};
-  --color-gray-700: ${COLORS.gray[700]};
-  --color-gray-900: ${COLORS.gray[900]};
-  --color-primary: ${COLORS.primary};
-  --color-secondary: ${COLORS.secondary};
+  --color-white: hsl(${COLORS.white});
+  --color-gray-100: hsl(${COLORS.gray[100]});
+  --color-gray-300: hsl(${COLORS.gray[300]});
+  --color-gray-500: hsl(${COLORS.gray[500]});
+  --color-gray-700: hsl(${COLORS.gray[700]});
+  --color-gray-900: hsl(${COLORS.gray[900]});
+  --color-primary: hsl(${COLORS.primary});
+  --color-secondary: hsl(${COLORS.secondary});
+  --color-backdrop: hsl(${COLORS.gray[700]} / 0.8);
+
   --weight-normal: ${WEIGHTS.normal};
   --weight-medium: ${WEIGHTS.medium};
   --weight-bold: ${WEIGHTS.bold};
+  
 }
 
 html, body, #root {
